@@ -1,0 +1,204 @@
+body{
+    background-color: #111111;
+    color: white;
+}
+#list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+td{
+    padding: 10px;
+}
+a{
+    color: white;
+}
+a:visited{
+    color: yellow;
+}
+a:hover{
+    color: orange;
+}
+
+h2{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header_movie #dateinput{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.date{
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #111111;
+    box-shadow: 4px 4px 10px black,
+    -4px -4px 10px black;
+}
+.date::-webkit-calendar-picker-indicator{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: white;
+}
+.date::-webkit-calendar-picker-indicator:hover{
+    background-color: yellow;
+}
+
+.custom-select h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-select {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.custom-select select {
+    display: none;
+}
+
+
+.select-selected {
+    background-color: #111111;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #111111;
+    color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: yellow;
+}
+
+.submitButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research{
+    margin-top: 50px;
+    width: 25%;
+    height: 30px;
+    background-color: #111111;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+}
+.api-btn{
+    background-color: #111111;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+.api-btn:hover{
+    border: 1px solid yellow;
+    color: yellow;
+}
+.research:hover{
+
+    border: 2px solid yellow;
+    color: yellow;
+}
+
+.youtube {
+    margin: 50px auto;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+div[class*="main"] {
+    margin-bottom: 10px;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+div[class*="main"]  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div[class*="list"] {
+    display: flex;
+    gap: 10px;
+}
+div[class*="list"] .thumbnail {
+    max-width: 25%;
+    cursor: pointer;
+}
+div[class*="list"] img {
+    max-width: 100%;
+}
+
+@media (max-width: 990px) {
+    .youtube { width: 90%; }
+}
+
+
+
+
+
+
+
+

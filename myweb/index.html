@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/headerfooter.css">
+<link rel="stylesheet" href="css/index.css">
+<title>JK 해드리오</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script src="https://kit.fontawesome.com/38b82e153d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id = "header">
+        <h1>JK PAGE</h1>
+        <h1 id="title">해드리오</h1>
+        <nav id = "menubar">
+            <ul>
+                <li class = "moveTomainPage"><a href="javascript:void(0);"><i class="fa-solid fa-football"></i> 해드리오 메인</a></li>
+                <li class = "login"><a href="javascript:void(0);" onclick="kakaoLogin();"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a></li>
+                <li class = "logout"><a href="javascript:void(0);" ><i class="fa-solid fa-file"></i>마이페이지</a></li>
+                <li class = "logout"><a href="javascript:void(0);" onclick="kakaoLogout();"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</a></li>
+                <li><a class = "weather" href="javascript:void(0);"><i class="fa-solid fa-cloud"></i>날씨알리미</a></li>
+                <li><a class = "map" href="javascript:void(0);"><i class="fa-solid fa-map"></i>지도</a></li>
+                <li><a class = "movie" href="javascript:void(0);"><i class="fa-solid fa-clapperboard"></i>영화 관련 정보</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/mahomes.jpg?alt=media&token=fc1be017-2bbe-4ad9-9b17-7462e47ddd51&_gl=1*1ihe3rx*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMzM1OC40Mi4wLjA." style="width:100%">
+                <div class="text" style="color: black">사진을 이런식으로 넣고싶었는데</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/PRU20200203235801848_P4.jpg?alt=media&token=0f832e8c-27b4-4632-b2de-393860f16f6e&_gl=1*ptkrse*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjU1MS4zMi4wLjA." style="width:100%">
+                <div class="text" style="color: black">넣을 사진이 없어서</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/download.png?alt=media&token=6acd9cdc-7b79-4792-9f47-ed6dcf537180&_gl=1*xlxnek*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjYwNC40NC4wLjA." style="width:100%">
+                <div class="text" style="color: black">제가 좋아하는 걸 넣어봤습니다</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/KakaoTalk_Photo_2023-11-05-00-37-08%20001.jpeg?alt=media&token=6d73509c-803e-4ad6-b09f-4f5526b48502&_gl=1*tjhbvc*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjY3MC41MS4wLjA." style="width:100%">
+                <div class="text">상곤이가 자고있길래</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/KakaoTalk_Photo_2023-11-05-00-37-09%20002.jpeg?alt=media&token=36dd8c76-06d8-4106-80f1-35c4b2cf3c02&_gl=1*5a0far*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjcxMy44LjAuMA.." style="width:100%">
+                <div class="text">재환님과 추억을 쌓았습니다</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/KakaoTalk_Photo_2023-11-05-00-37-09%20003.jpeg?alt=media&token=749e3554-a654-4aa0-bccb-1b7252d33abd&_gl=1*10gia2d*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjc1My42MC4wLjA." style="width:100%">
+                <div class="text">이런거에는 빠질수 없다는 창희까지</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/download.jpg?alt=media&token=3fffa884-c484-4795-9171-087aef3a6d8f&_gl=1*v761ns*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMjk2NC41OS4wLjA." style="width:100%">
+                <div class="text">그냥 이뻐서 넣었습니다</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/images1.jpg?alt=media&token=792852f1-c6e4-44b0-8af5-02cb1270ab7f&_gl=1*r8plir*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTExMTY4OC4zLjEuMTY5OTExMzE5Ni40OC4wLjA." style="width:100%">
+                <div class="text">예비군 갑니다....</div>
+            </div>
+        </div>
+        <br>
+
+    </section>
+        <!-- 로그인 설명-->
+        <section class="conC">
+            <div class="container">
+                <!-- 개요 (이미지 + 텍스트) -->
+                <!-- 이미지 -->
+                <div class="photo1"></div>
+                <!-- 텍스트 -->
+                <div class="textconC">
+                    <!-- 제목 -->
+                    <h2>해드리오 페이지는 카카오 로그인을 통해 영화 정보, 관광 정보, 날씨 등을 확인 할 수 있습니다!</h2>
+                    <!-- 문장 -->
+                    <p>카카오 로그인을 원하시면 아래 버튼을 눌러주세요!</p>
+                    <!-- 링크박스 -->
+                    <a href="javascript:void(0);" onclick = "kakaoLogin();">카카오 계정으로 로그인하기
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    <!-- 날씨 설명-->
+    <section class="conD">
+        <div class="container">
+            <!-- 개요 (텍스트 + 이미지)-->
+            <div class="photo1"></div>
+            <div class="textconD">
+                <h2>해드리오 페이지의 날씨 페이지에는 각 도시의 영어이름으로 검색하시면 그날의 날씨를 확인할 수 있습니다!</h2>
+                <p>openWeather에서 지원하는 날씨 api를 이용하여 날씨를 검색할 수 있습니다!</p>
+                <a class="weather" href="javascript:void(0)">날씨 검색하러가기
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 지도 설명-->
+    <section class="conC">
+        <div class="container">
+            <!-- 개요 (이미지 + 텍스트) -->
+            <!-- 이미지 -->
+            <div class="photo2"></div>
+            <!-- 텍스트 -->
+            <div class="textconC">
+                <!-- 제목 -->
+                <h2>해드리오 페이지의 지도 페이지는 카카오맵을 키워드를 검색 가능하며, 각가지 관광</h2>
+                <!-- 문장 -->
+                <p>지도를 보기위해, 관광 정보를 보기 위해 영화정보를 보기 위해 다른 페이지를 방문 하지 않아도 됩니다!</p>
+                <!-- 링크박스 -->
+                <a class = "map">지도보러가기
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 영화 관련 설명-->
+    <section class="conD">
+        <div class="container">
+            <!-- 개요 (텍스트 + 이미지)-->
+            <div class="photo2"></div>
+            <div class="textconD">
+                <h2>날짜를 선택해 영화의 순위를 확인 할 수 있다!</h2>
+                <p>날짜와 카테고리를 선택하고 그 영화 예고편을 바로 확인하세요!</p>
+                <a class="movie">영화 검색하러가기
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/imageMovement.js"></script>
+<script src = "js/checkuser.js"></script>
+<script src ="js/kakaologinout.js"></script>
+</html>

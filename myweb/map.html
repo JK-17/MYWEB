@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/38b82e153d.js" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/kakaomap.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <title>지도!</title>
+</head>
+<body>
+<header id = "header">
+    <h1>JK PAGE</h1>
+    <h1 id="title">해드리오</h1>
+    <nav id = "menubar">
+        <ul >
+            <li class = "moveTomainPage"><a href="javascript:void(0);"><i class="fa-solid fa-football"></i> 해드리오 메인</a></li>
+            <li class = "login"><a href="javascript:void(0);" onclick="kakaoLogin();"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a></li>
+            <li class = "logout"><a href="javascript:void(0);" ><i class="fa-solid fa-file"></i>마이페이지</a></li>
+            <li class = "logout"><a href="javascript:void(0);" onclick="kakaoLogout();"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</a></li>
+            <li><a class = "weather" href="javascript:void(0);"><i class="fa-solid fa-cloud"></i>날씨알리미</a></li>
+            <li><a class = "map" href="javascript:void(0);"><i class="fa-solid fa-map"></i>지도</a></li>
+            <li><a class = "movie" href="javascript:void(0);"><i class="fa-solid fa-clapperboard"></i>영화 관련 정보</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+    <div id="menu_wrap" class="bg_white">
+        <div class="option">
+            <div>
+                <form onsubmit="searchPlaces(); return false;">
+                    키워드 : <input type="text" value="강남 코리아IT아카데미" id="keyword" size="15">
+                    <button type="submit">검색하기</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+    </div>
+</div>
+
+<br>
+<section id = "searchFest">
+    <h2>관광정보 관련</h2>
+    <form>
+        <div id="receiptOption">
+           <div class = "radiobtn">
+               <input type="radio" id="rad1" name="option" value="/searchKeyword1">
+               <label for="rad1">키워드로 검색 조회</label>
+           </div>
+            <div class = "radiobtn">
+                <input type="radio"  id="rad2" name="option" value="/searchFestival1">
+                <label for="rad2">행사 정보조회</label>
+            </div>
+            <div class = "radiobtn">
+                <input type="radio" id="rad3" name="option" value="/searchStay1">
+                <label for="rad3">숙박정보조회</label>
+            </div>
+        </div>
+    </form>
+    <form class="inner_table" name="frm1">
+        <table>
+            <tr>
+                <th>키워드로 검색 조회</th>
+                <td><input type="text" name="keyword" placeholder="" value="" required></td>
+            </tr>
+        </table>
+    </form>
+    <form class="inner_table" name="frm2">
+        <table>
+            <tr>
+                <th>행사 정보조회</th>
+                <td><input class="dateFest" type="date" name="dateFest" placeholder="" value="" required></td>
+            </tr>
+        </table>
+    </form>
+    <form class="inner_table" name="frm3">
+        <table>
+            <tr>
+                <th>숙박정보조회</th>
+                <td>
+                    입력하실 정보가 없습니다 버튼을 눌러 데이터를 확인하세욤
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <div id="buttondiv"><button  id="btn">검색결과확인</button></div>
+
+    <br>
+    <div id = "result"></div>
+</section>
+
+
+
+<script src="js/tourReg.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=AppKey&libraries=services"></script>
+<script src="js/kakaoMapMovment.js"></script>
+</body>
+<script src = "js/checkuser.js"></script>
+<script src ="js/kakaologinout.js"></script>
+</html>

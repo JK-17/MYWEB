@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/38b82e153d.js" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <title>날씨 알리미</title>
+</head>
+<body>
+<header id = "header">
+    <h1>JK PAGE</h1>
+    <h1 id="title">해드리오</h1>
+    <nav id = "menubar">
+        <ul >
+            <li class = "moveTomainPage"><a href="javascript:void(0);"><i class="fa-solid fa-football"></i> 해드리오 메인</a></li>
+            <li class = "login"><a href="javascript:void(0);" onclick="kakaoLogin();"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a></li>
+            <li class = "logout"><a href="javascript:void(0);" ><i class="fa-solid fa-file"></i>마이페이지</a></li>
+            <li class = "logout"><a href="javascript:void(0);" onclick="kakaoLogout();"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</a></li>
+            <li><a class = "weather" href="javascript:void(0);"><i class="fa-solid fa-cloud"></i>날씨알리미</a></li>
+            <li><a class = "map" href="javascript:void(0);"><i class="fa-solid fa-map"></i>지도</a></li>
+            <li><a class = "movie" href="javascript:void(0);"><i class="fa-solid fa-clapperboard"></i>영화 관련 정보</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="today-time">
+    <span class="year">0000</span>년
+    <span class="month">00</span>월
+    <span class="date">00</span>일
+    <span class="todayTimes">00000</span>
+</div>
+
+    <div class = "search">
+        <input type="text"  class ="data" placeholder="search..." required>
+        <button class="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #fafafa;"></i></button>
+    </div>
+
+
+
+    <span id = "content">
+        <div id="icon">
+        <h2 class="city"> </h2>
+        <div class="today-icon"> </div>
+    </div>
+    <div class="today-weather">
+        <h2>Today Weather</h2>
+        <h4 class="day">000</h4>
+        <div class="weather-text">
+            <div class="first-line"><i class="fa-solid fa-temperature-three-quarters" style="color: #ffffff;"></i>Temp <span class="first-span"><span class="temp"></span>&#8451</span></div>
+            <br>
+            <div class="second-line"><i class="fa-solid fa-temperature-low" style="color: #ffffff;"></i><i class="fa-solid fa-temperature-high" style="color: #ffffff;"></i>Min/Max Temp <span class="second-span"><span class="max"></span>&#8451 / <span class="min"></span>&#8451</span></div>
+            <br>
+            <div class="third-line"><i class="fa-solid fa-wind" style="color: #ffffff;"></i>Wind <span class="third-span"><span class="wind"></span><span>km/h</span></div>
+            <br>
+            <div class="fourth-line"><i class="fa-solid fa-cloud" style="color: #ffffff;"></i>Clouds <span class="fourth-span"><span class="clouds"></span><span>%</span></div>
+        </div>
+    </div>
+    </span>
+
+
+<br><br><br><br><br><br><br><br>
+</body>
+<script src="js/weatherMovement.js"></script>
+<script src = "js/checkuser.js"></script>
+<script src ="js/kakaologinout.js"></script>
+</html>

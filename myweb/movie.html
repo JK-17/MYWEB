@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+            integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
+    <script>
+        Kakao.init('AppKey'); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
+    <script src="https://kit.fontawesome.com/38b82e153d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <title>영화 추천</title>
+</head>
+<body>
+<header id = "header">
+    <h1>JK PAGE</h1>
+    <h1 id="title">해드리오</h1>
+    <nav id = "menubar">
+        <ul >
+            <li class = "moveTomainPage"><a href="javascript:void(0);"><i class="fa-solid fa-football"></i> 해드리오 메인</a></li>
+            <li class = "login"><a href="javascript:void(0);" onclick="kakaoLogin();"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a></li>
+            <li class = "logout"><a href="javascript:void(0);" ><i class="fa-solid fa-file"></i>마이페이지</a></li>
+            <li class = "logout"><a href="javascript:void(0);" onclick="kakaoLogout();"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</a></li>
+            <li><a class = "weather" href="javascript:void(0);"><i class="fa-solid fa-cloud"></i>날씨알리미</a></li>
+            <li><a class = "map" href="javascript:void(0);"><i class="fa-solid fa-map"></i>지도</a></li>
+            <li><a class = "movie" href="javascript:void(0);"><i class="fa-solid fa-clapperboard"></i>영화 관련 정보</a></li>
+        </ul>
+    </nav>
+</header>
+    <div id="header_movie">
+        <h2>영화 추천!!!</h2>
+        <h2> 밑에 있는 버튼을 눌러 날짜를 선택해 그날의 영화 순위를 확인하세요</h2>
+        <div id="dateinput">
+            <input class = "date" type="date">
+        </div>
+
+        <br>
+    </div>
+    <h2>한국 영화인지 외국영화인지 선택해주세요!!</h2>
+    <div class = "custom-select" style="width:200px;">
+        <br>
+        <select  id="type">
+            <option value="">선택</option>
+            <option value="" >전체</option>
+            <option value="K">한국</option>
+            <option value="F">외국</option>
+        </select>
+    </div>
+
+    <br>
+    <div class="submitButton"><button class = "research">검색</button></div>
+    <br>
+    <div id="list"></div>
+    <hr style="background-color: white">
+    <br>
+    <h2>예고편들을 확인하세요!</h2>
+    <div class = "youtube">
+        <div id = "main_1" class = "main_1"></div>
+        <div class = "list_1"></div>
+        <div id = "main_2" class = "main_2"></div>
+        <div class = "list_2"></div>
+        <div id = "main_3" class = "main_3"></div>
+        <div class = "list_3"></div>
+        <div id = "main_4" class = "main_4"></div>
+        <div class = "list_4"></div>
+        <div id = "main_5" class = "main_5"></div>
+        <div class = "list_5"></div>
+        <div id = "main_6" class = "main_6"></div>
+        <div class = "list_6"></div>
+        <div id = "main_7" class = "main_7"></div>
+        <div class = "list_7"></div>
+        <div id = "main_8" class = "main_8"></div>
+        <div class = "list_8"></div>
+        <div id = "main_9" class = "main_9"></div>
+        <div class = "list_9"></div>
+        <div id = "main_10" class = "main_10"></div>
+        <div class = "list_10"></div>
+    </div>
+</body>
+<script src="js/movieApiKakaoYoutube.js"></script>
+<script src="js/movieSelectMovement.js"></script>
+<script src = "js/checkuser.js"></script>
+<script src ="js/kakaologinout.js"></script>
+</html>

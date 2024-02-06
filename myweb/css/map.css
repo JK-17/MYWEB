@@ -1,0 +1,124 @@
+body{
+    background-color: #111111;
+}
+#searchFest{
+    color: white;
+}
+
+
+#searchFest h2{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#receiptOption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner_table{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=radio] {
+    display: none;
+}
+
+.radiobtn {
+    width: 47%;
+    height : 45px;
+    border-radius: 20px;
+}
+.radiobtn label {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+}
+
+.radiobtn input[type=radio]:checked + label {
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+/* Disabled */
+.radiobtn input[type=radio] + label {
+    border: 1px solid white;
+    color: white;
+}
+
+
+input[name="keyword"]{
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.dateFest{
+    width: 300px;
+    padding: 15px;
+    margin-left: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #111111;
+    box-shadow: 4px 4px 10px black,
+                -4px -4px 10px black;
+}
+.dateFest::-webkit-calendar-picker-indicator{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: white;
+}
+.dateFest::-webkit-calendar-picker-indicator:hover{
+    background-color: yellow;
+}
+
+#btn{
+    background-color: #111111;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+#btn:hover{
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+#buttondiv{
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+}
+
+#datasfromitem{
+    box-sizing: border-box;
+
+}
+.contentsfromitem{
+    width: 33%;
+    height: 150px;
+    float: left;
+    margin-bottom: 50px;
+}
+.contentsfromitem a{
+    color: white;
+}
+.contentsfromitem a:visited{
+    color: yellow;
+}
+.contentsfromitem a:hover{
+    color: orange;
+}
+
+img{
+    width: 33.33%;
+    height: 50px;
+}

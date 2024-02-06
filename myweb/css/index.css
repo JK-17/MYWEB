@@ -1,0 +1,233 @@
+* {box-sizing:border-box}
+body{
+    margin: 0;
+    background-color: #111111;
+}
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 500px;
+}
+
+
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/**//**//**//**//**/
+/*컨텐츠 C*/
+
+.conC {
+
+    color: #fff;
+}
+.conC .textconC {
+    padding: 20px;
+}
+
+
+.conC h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conC p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+.conC a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 10px 30px;
+    border : solid 3px currentColor;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.conC a:hover {
+    background-image: linear-gradient(
+            rgba(255,255,255,0.2),
+            rgba(255,255,255,0.2)
+    );
+    color: yellow;
+}
+
+.conC .photo1 {
+    min-height: 200px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB.png?alt=media&token=dd597825-3b28-4907-b852-f97fab047c92&_gl=1*1vz5ytd*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTE4MjQ2NC40LjEuMTY5OTE4MjgzNS4xNy4wLjA.");
+    background-position: center;
+    background-size: cover;
+}
+.conC .photo2 {
+    min-height: 200px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%AA%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9.png?alt=media&token=08f18b83-470f-4a9e-b420-d2821b347872&_gl=1*lfablq*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTE4MjQ2NC40LjEuMTY5OTE4MjkyMi42LjAuMA..");
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+
+    .conC .container {
+        display: flex;
+
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .conC .photo1 {
+        flex: 3;
+    }
+    .conC .photo2 {
+        flex: 3;
+    }
+    .conC .textconC {
+        flex: 2;
+        padding: 50px;
+
+    }
+    .conD .container {
+        display: flex;
+        flex-direction: row-reverse;
+
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+    }
+
+    .conD .photo1 {
+        flex: 0 0 400px;
+
+
+    }
+    .conD .photo2 {
+        flex: 0 0 400px;
+
+
+    }
+    .conD .textconD {
+        flex: 1;
+        padding: 50px;
+    }
+}
+
+/**//**//**//**//**/
+/*컨텐츠 D*/
+.conD{
+    color: #fff;
+}
+.conD .textconD {
+    padding: 20px;
+}
+
+.conD h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conD p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.conD a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 10px 30px;
+    border : solid 3px currentColor;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.conD a:hover   {
+    background-image: linear-gradient(
+            rgba(255,255,255,0.2),
+            rgba(255,255,255,0.2)
+    );
+    color: yellow;
+}
+.conD .photo1 {
+    min-height: 200px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/%E1%84%82%E1%85%A1%E1%86%AF%E1%84%8A%E1%85%B5.png?alt=media&token=0e6d5ba1-a71c-48fd-9044-b0e6643d38de&_gl=1*2g8uyq*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTE4MjQ2NC40LjEuMTY5OTE4Mjg2OC42MC4wLjA.");
+    background-position: center;
+    background-size: cover;
+}
+.conD .photo2 {
+    min-height: 200px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/nflmyproject.appspot.com/o/%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%AA.png?alt=media&token=cd8ee3ad-afef-402e-8c9e-f4bb5bdcd996&_gl=1*u1w1hd*_ga*MTU1MTgwNTA1LjE2OTkwODU0NDU.*_ga_CW55HF8NVT*MTY5OTE4MjQ2NC40LjEuMTY5OTE4Mjk4My42MC4wLjA.");
+    background-position: center;
+    background-size: cover;
+}
+.conD .container {
+    padding-top: 2px;  /* 모바일에서 위 여백 */
+}
+
